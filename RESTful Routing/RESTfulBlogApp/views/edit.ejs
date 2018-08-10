@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+<div class=" ui main text container segment">
+    <div class="ui huge header">Edit <%= blog.title %></div>
+    <form class ="ui form" action="/blogs/<%= blog._id %>?_method=PUT"method="POST"> <!-- this ?_method=put allows us further functionality, helps us maintain restful routing -->
+        <div class="field">
+            <label>Title</label>
+                <input type="text" name="blog[title]" value="<%= blog.title %>">  <!-- this will place the title of the blog into the line -->
+        </div>
+        <div class="field">
+            <label>Image</label>
+        <input type="text" name="blog[image]" value="<%= blog.image %>">  <!-- this will preload the url for the image -->
+        </div>
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]"><%= blog.body %></textarea> <!-- the ejs inputter and blog.body will prefill the text area with the post content -->
+        </div>    
+        <input class="ui violet basic button big" type="submit">
+    </form>
+</div>
+
+
+
+<% include ./partials/footer %>

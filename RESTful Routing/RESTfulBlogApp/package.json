@@ -1,0 +1,20 @@
+{
+  "name": "restfulblogapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "BlogApp"
+  },
+  "author": "Dimitri McDaniel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express-sanitizer": "^1.0.3",
+    "method-override": "^2.3.10"
+  }
+}

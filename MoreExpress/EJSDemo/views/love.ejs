@@ -1,0 +1,20 @@
+    <% include partials/header %>   <!-- pulling the template from the partials folder and header file -->
+    
+    
+            <h1>You fell in love with: <%= thingVar.toUpperCase() %> </h1>  <!-- what ever goes with in these arrows with percentage signs are treated as java script instead of regular html -->
+
+            <% if(thingVar.toLowerCase() === "rusty") {  %>   <!-- all javascript must have < %  % >  enclosing to be added in..  -->
+            
+            <p> Good choice rusty is the best</p> 
+            <% } else { %>
+            
+                 <P>Bad choice you should have said rusty.. cmon dude.</P>
+            <% } %>     
+     
+     
+                <p>P.s this is the love.ejs file!</p>
+
+   
+
+
+   <%  include partials/footer %>

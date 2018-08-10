@@ -1,0 +1,33 @@
+<% include partials/header %>
+  
+
+
+
+    <div class="container">
+    
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Welcome To YelpCamp!</h1>
+                <p>View our hand-picked Campgrounds from all over the world</p>
+                <p>
+                    <a class="btn btn-primary btn-large" href ="/campgrounds/new">Add New CampGround</a>
+                </p>
+            </div>
+        </header>
+
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;"> <!-- (adaptable grid) this will make sure everything is aligned perfectly.. giving and taking space -->
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6"> <!-- when screen is minimized or on smaller screen this shrinks the content in the div (responsive) -->
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>">   <!-- this will place what ever image inserted into thumbnail --> 
+                    <div class="caption">
+                        <h4><%= campground.name %></h4>
+                    </div>
+                </div>   
+            </div>    
+        <% }); %>
+    </div>
+</div>
+
+<% include partials/footer %>
+
